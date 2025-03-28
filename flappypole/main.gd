@@ -12,4 +12,4 @@ func _process(delta):
 	if tilemap_container:
 		for tilemap in tilemap_container.get_children():
 			if tilemap is TileMap:
-				tilemap.position.x += speed * delta
+				tilemap.position.x -= speed * delta  # <-- Changed "+" to "-"
