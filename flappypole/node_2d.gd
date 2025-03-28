@@ -9,7 +9,7 @@ func _physics_process(delta: float) -> void:
 	
 	if velocity.y < -150:
 		$Bird.play("tiltUp")
-	elif velocity.y > 150:
+	elif velocity.y > 150:   
 		$Bird.play("tiltDown")
 	else:
 		$Bird.play("tiltFlat")
