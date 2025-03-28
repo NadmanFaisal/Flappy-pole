@@ -1,20 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://bodl4u1mjvsvm"]
+[gd_scene load_steps=7 format=3 uid="uid://bodl4u1mjvsvm"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_01m1b"]
+[ext_resource type="Texture2D" uid="uid://dxhdfhd284jpa" path="res://Assets/Sprites/Bird3.png" id="2_epd4h"]
 [ext_resource type="Texture2D" uid="uid://ho4br6l6p1ft" path="res://Assets/Sprites/Bird.png" id="2_pynqt"]
+[ext_resource type="Texture2D" uid="uid://bhgugmuop7fc0" path="res://Assets/Sprites/Bird2.png" id="4_ytawk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yolm2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_epd4h")
+}],
+"loop": true,
+"name": &"tiltDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pynqt")
+}],
+"loop": true,
+"name": &"tiltFlat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ytawk")
+}],
+"loop": true,
+"name": &"tiltUp",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1jb77"]
 radius = 28.0
 height = 76.0
 
-[node name="Bird" type="CharacterBody2D"]
+[node name="BirdSprite" type="CharacterBody2D"]
 position = Vector2(571, 289)
 script = ExtResource("1_01m1b")
 
-[node name="Bird" type="Sprite2D" parent="."]
+[node name="Bird" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.017334, 0.125)
 scale = Vector2(0.132553, 0.132553)
-texture = ExtResource("2_pynqt")
+sprite_frames = SubResource("SpriteFrames_yolm2")
+animation = &"tiltUp"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
