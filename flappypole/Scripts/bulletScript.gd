@@ -1,35 +1,28 @@
 extends CharacterBody2D
 
-const SPEED: float = -200.0  # Negative to move left
+const SPEED: float = -200.0
 var half_screen_x: float
 
-@onready var anim = $AnimatedSprite2D  # Reference to AnimatedSprite2D
+@onready var anim = $AnimatedSprite2D
 
 func _ready() -> void:
 	var screen_size = get_viewport_rect().size
-	half_screen_x = screen_size.x * 0.5  # Get 1/2 of the screen width
+	half_screen_x = screen_size.x * 0.5
 
 func _physics_process(delta: float) -> void:
-	# Move left
 	velocity.x = SPEED
-
-	# Move the character
 	move_and_slide()
 
-	# Change animation when reaching a quarter of the screen
 	if position.x <= half_screen_x:
-		$AnimatedSprite2D.frame = 1  # Replace with your animation name
+		$AnimatedSprite2D.frame = 1
 
-	# Stop at the left edge
 	if position.x <= 0:
 		velocity.x = 0
 		position.x = 0
 		print("Reached the left edge!")
 
-
 func _on_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
-
+	pass
 
 func _on_Hitbox_body_entered(body: Node2D) -> void:
 	if body.name == "Bird":

@@ -16,8 +16,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		rotation_degrees = 0
 
-
-
 	var screen_size = get_viewport_rect().size
 	if position.y > screen_size.y or position.y < 0:
 		_game_over()
