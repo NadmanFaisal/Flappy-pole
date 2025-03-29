@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://7vy12gx82n21"]
+[gd_scene load_steps=4 format=3 uid="uid://7vy12gx82n21"]
 
-[ext_resource type="PackedScene" uid="uid://cm0ybg5u7nku4" path="res://Scenes/BulletScene.tscn" id="1_bspe6"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_cn4s1"]
 [ext_resource type="PackedScene" uid="uid://bodl4u1mjvsvm" path="res://Scenes/BirdScene.tscn" id="2_no7or"]
+[ext_resource type="PackedScene" uid="uid://cg3v5uw0nfior" path="res://Scenes/scoreScene.tscn" id="3_emdx2"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Bullet" parent="." instance=ExtResource("1_bspe6")]
+script = ExtResource("1_cn4s1")
 
 [node name="Bird" parent="." instance=ExtResource("2_no7or")]
+position = Vector2(491, 289)
+
+[node name="ScoreHUD" parent="." instance=ExtResource("3_emdx2")]
+
+[node name="BulletSpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="BulletSpawnTimer" to="." method="_on_BulletSpawnTimer_timeout"]

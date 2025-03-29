@@ -17,16 +17,19 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.frame = 1
 
 	if position.x <= 0:
-		velocity.x = 0
-		position.x = 0
 		print("Reached the left edge!")
+		queue_free()  # Removes the bullet from the scene
+
 
 func _on_area_entered(area: Area2D) -> void:
 	pass
 
+signal bird_hit
+
 func _on_Hitbox_body_entered(body: Node2D) -> void:
 	if body.name == "Bird":
 		print("Bird hit!")
+		emit_signal("bird_hit")
 		body._game_over()
 		bullet_game_over()
 

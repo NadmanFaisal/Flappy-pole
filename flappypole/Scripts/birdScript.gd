@@ -5,6 +5,8 @@ const JUMP_FORCE: float = -400.0
 
 var bullet_scene = preload("res://Scenes/BulletScene.tscn")
 
+signal bird_out_of_bounds
+
 func _physics_process(delta: float) -> void:
 	velocity.y += GRAVITY * delta
 	move_and_slide()
@@ -18,6 +20,7 @@ func _physics_process(delta: float) -> void:
 
 	var screen_size = get_viewport_rect().size
 	if position.y > screen_size.y or position.y < 0:
+		emit_signal("bird_out_of_bounds")
 		_game_over()
 
 func _input(event: InputEvent) -> void:
