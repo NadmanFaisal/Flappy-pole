@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bodl4u1mjvsvm"]
+[gd_scene load_steps=6 format=3 uid="uid://bodl4u1mjvsvm"]
 
-[ext_resource type="Script" path="res://Scripts/birdScript.gd" id="1_01m1b"]
+[ext_resource type="Script" uid="uid://cly3dkdfrgp3f" path="res://Scripts/birdScript.gd" id="1_01m1b"]
 [ext_resource type="Texture2D" uid="uid://ho4br6l6p1ft" path="res://Assets/Sprites/Bird.png" id="2_pynqt"]
+[ext_resource type="AudioStream" uid="uid://bf5oskevndwc" path="res://Assests/BounceAudio.mp3" id="3_oyl3u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yolm2"]
 animations = [{
@@ -31,3 +32,6 @@ animation = &"tiltFlat"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_1jb77")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_oyl3u")
