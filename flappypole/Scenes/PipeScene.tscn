@@ -1,0 +1,210 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8nd8atnocd7w"]
+
+[ext_resource type="Script" path="res://Scripts/pipeScript.gd" id="1_p1buf"]
+[ext_resource type="Texture2D" uid="uid://5o6rd0qthgjb" path="res://Assests/background.jpg" id="2_6svvj"]
+[ext_resource type="Texture2D" uid="uid://b7i7btd4qw51b" path="res://Assests/Pipe.png" id="3_6yjks"]
+
+[node name="Pipe" type="Node2D"]
+position = Vector2(-387, 350)
+scale = Vector2(0.148051, 0.137481)
+script = ExtResource("1_p1buf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2620.72
+offset_top = -2538.53
+offset_right = 10380.7
+offset_bottom = 2212.47
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6svvj")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TopPipeGroup1" type="Sprite2D" parent="."]
+position = Vector2(4829.42, -189.117)
+
+[node name="TopPipe1" type="Sprite2D" parent="TopPipeGroup1"]
+position = Vector2(5916.88, -1942.09)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe2" type="Sprite2D" parent="TopPipeGroup1"]
+position = Vector2(6558.55, -2378.51)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe3" type="Sprite2D" parent="TopPipeGroup1"]
+position = Vector2(7119.17, -1418.38)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe4" type="Sprite2D" parent="TopPipeGroup1"]
+position = Vector2(7700.05, -1425.65)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe5" type="Sprite2D" parent="TopPipeGroup1"]
+position = Vector2(8247.15, -1862.07)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipeGroup2" type="Sprite2D" parent="."]
+position = Vector2(4829.42, -189.117)
+
+[node name="TopPipe1" type="Sprite2D" parent="TopPipeGroup2"]
+position = Vector2(8888.83, -2349.41)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe2" type="Sprite2D" parent="TopPipeGroup2"]
+position = Vector2(9530.5, -1563.85)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe3" type="Sprite2D" parent="TopPipeGroup2"]
+position = Vector2(10091.1, -1825.7)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe4" type="Sprite2D" parent="TopPipeGroup2"]
+position = Vector2(10672, -1542.03)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe5" type="Sprite2D" parent="TopPipeGroup2"]
+position = Vector2(11219.1, -2560.35)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipeGroup3" type="Sprite2D" parent="."]
+position = Vector2(4829.42, -189.117)
+
+[node name="TopPipe1" type="Sprite2D" parent="TopPipeGroup3"]
+position = Vector2(11806.7, -1883.89)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe2" type="Sprite2D" parent="TopPipeGroup3"]
+position = Vector2(12448.4, -1854.8)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe3" type="Sprite2D" parent="TopPipeGroup3"]
+position = Vector2(13009, -2640.36)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe4" type="Sprite2D" parent="TopPipeGroup3"]
+position = Vector2(13589.9, -1542.03)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="TopPipe5" type="Sprite2D" parent="TopPipeGroup3"]
+position = Vector2(14137, -1978.45)
+rotation = -3.14159
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipeGroup1" type="Sprite2D" parent="."]
+position = Vector2(4829.42, -189.117)
+
+[node name="BottomPipe1" type="Sprite2D" parent="BottomPipeGroup1"]
+position = Vector2(6470.74, 1425.65)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe2" type="Sprite2D" parent="BottomPipeGroup1"]
+position = Vector2(6997.59, 2073.01)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe3" type="Sprite2D" parent="BottomPipeGroup1"]
+position = Vector2(7578.47, 1723.88)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe4" type="Sprite2D" parent="BottomPipeGroup1"]
+position = Vector2(8125.58, 2720.38)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe5" type="Sprite2D" parent="BottomPipeGroup1"]
+position = Vector2(8699.71, 2371.24)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipeGroup2" type="Sprite2D" parent="."]
+position = Vector2(4829.42, -189.117)
+
+[node name="BottomPipe1" type="Sprite2D" parent="BottomPipeGroup2"]
+position = Vector2(9280.59, 1840.25)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe2" type="Sprite2D" parent="BottomPipeGroup2"]
+position = Vector2(9807.43, 1491.12)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe3" type="Sprite2D" parent="BottomPipeGroup2"]
+position = Vector2(10388.3, 2684.01)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe4" type="Sprite2D" parent="BottomPipeGroup2"]
+position = Vector2(10935.4, 2313.05)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe5" type="Sprite2D" parent="BottomPipeGroup2"]
+position = Vector2(11509.6, 2662.19)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipeGroup3" type="Sprite2D" parent="."]
+position = Vector2(4829.42, -189.117)
+
+[node name="BottomPipe1" type="Sprite2D" parent="BottomPipeGroup3"]
+position = Vector2(12090.4, 1782.06)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe2" type="Sprite2D" parent="BottomPipeGroup3"]
+position = Vector2(12617.3, 2189.39)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe3" type="Sprite2D" parent="BottomPipeGroup3"]
+position = Vector2(13198.2, 2102.11)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe4" type="Sprite2D" parent="BottomPipeGroup3"]
+position = Vector2(13745.3, 2894.94)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
+
+[node name="BottomPipe5" type="Sprite2D" parent="BottomPipeGroup3"]
+position = Vector2(14319.4, 2313.05)
+scale = Vector2(2.03755, 2.98475)
+texture = ExtResource("3_6yjks")
