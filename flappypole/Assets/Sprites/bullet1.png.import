@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7i7btd4qw51b"
-path="res://.godot/imported/Pipe.png-f6f01ed300c4e07447d8130a11b501fb.ctex"
+uid="uid://cv158jk14s545"
+path="res://.godot/imported/bullet1.png-190042fa0662b69369d50fdcaa924dfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/Pipe.png"
-dest_files=["res://.godot/imported/Pipe.png-f6f01ed300c4e07447d8130a11b501fb.ctex"]
+source_file="res://Assets/Sprites/bullet1.png"
+dest_files=["res://.godot/imported/bullet1.png-190042fa0662b69369d50fdcaa924dfb.ctex"]
 
 [params]
 

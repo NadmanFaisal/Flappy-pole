@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlpbatp3gmarp"]
+[gd_scene load_steps=4 format=3 uid="uid://b8nd8atnocd7w"]
 
-[ext_resource type="Script" uid="uid://cuqgjhaq0shws" path="res://Scripts/pipe.gd" id="1_p1buf"]
+[ext_resource type="Script" path="res://Scripts/pipeScript.gd" id="1_p1buf"]
 [ext_resource type="Texture2D" uid="uid://5o6rd0qthgjb" path="res://Assests/background.jpg" id="2_6svvj"]
-[ext_resource type="Texture2D" uid="uid://bh35qslxg28v7" path="res://Assests/Pipe.png" id="3_6yjks"]
+[ext_resource type="Texture2D" uid="uid://b7i7btd4qw51b" path="res://Assests/Pipe.png" id="3_6yjks"]
 
 [node name="Pipe" type="Node2D"]
 position = Vector2(-387, 350)
