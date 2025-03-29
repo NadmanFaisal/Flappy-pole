@@ -29,5 +29,5 @@ func game_over():
 	print("Game Over!")
 	bird._game_over()
 	score.stop_score()
-	
+
 	$BulletSpawnTimer.stop()
