@@ -11,5 +11,8 @@ config_version=5
 [application]
 
 config/name="FlappyPole"
-run/main_scene="uid://lapqjkjekeq3"
 config/features=PackedStringArray("4.4", "Forward Plus")
+
+[display]
+
+window/size/resizable=false
