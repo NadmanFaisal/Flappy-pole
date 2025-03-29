@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://7vy12gx82n21"]
+[gd_scene load_steps=6 format=3 uid="uid://7vy12gx82n21"]
 
 [ext_resource type="Script" uid="uid://b5j86qeccvsp0" path="res://Scripts/main.gd" id="1_cn4s1"]
 [ext_resource type="PackedScene" uid="uid://b8nd8atnocd7w" path="res://Scenes/PipeScene.tscn" id="2_agrsq"]
 [ext_resource type="PackedScene" uid="uid://bodl4u1mjvsvm" path="res://Scenes/BirdScene.tscn" id="2_no7or"]
 [ext_resource type="PackedScene" uid="uid://cg3v5uw0nfior" path="res://Scenes/scoreScene.tscn" id="3_emdx2"]
+[ext_resource type="AudioStream" uid="uid://dk0ra8ievudlk" path="res://Assests/WhilePlayMusic.mp3" id="5_kry3j"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cn4s1")
@@ -18,5 +19,8 @@ position = Vector2(491, 289)
 [node name="BulletSpawnTimer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="WhilePlayMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_kry3j")
 
 [connection signal="timeout" from="BulletSpawnTimer" to="." method="_on_BulletSpawnTimer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cm0ybg5u7nku4"]
+[gd_scene load_steps=15 format=3 uid="uid://cm0ybg5u7nku4"]
 
 [ext_resource type="Script" uid="uid://cbsxea0r2y3dj" path="res://Scripts/bulletScript.gd" id="1_vl44w"]
 [ext_resource type="Texture2D" uid="uid://dfjckxemkjm8f" path="res://Assets/Sprites/bullet.png" id="2_j5nx0"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dukftf5etvlld" path="res://Assets/Sprites/image_3.png" id="7_kjeor"]
 [ext_resource type="Texture2D" uid="uid://bk1mwl70y2ap4" path="res://Assets/Sprites/image_4.png" id="8_tpi8p"]
 [ext_resource type="AudioStream" uid="uid://ca56h8irqg2js" path="res://Assests/RPG.mp3" id="9_3r2qu"]
+[ext_resource type="AudioStream" uid="uid://cl6o3af76cgo2" path="res://Assests/Explossion1.mp3" id="10_4bok8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_no085"]
 animations = [{
@@ -75,5 +76,9 @@ process_material = SubResource("ParticleProcessMaterial_nrkt0")
 
 [node name="RPGAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_3r2qu")
+volume_db = -10.0
+
+[node name="CollisionAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_4bok8")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Hitbox_body_entered"]

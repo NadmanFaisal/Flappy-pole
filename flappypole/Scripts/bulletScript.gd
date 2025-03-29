@@ -10,6 +10,7 @@ func _ready() -> void:
 	half_screen_x = screen_size.x * 0.5
 	$RPGAudio.play()  # Play the RPG sound
 
+
 func _physics_process(delta: float) -> void:
 	velocity.x = SPEED
 	move_and_slide()
@@ -33,6 +34,7 @@ func _on_Hitbox_body_entered(body: Node2D) -> void:
 		emit_signal("bird_hit")
 		body._game_over()
 		bullet_game_over()
+		$CollisionAudio.play()
 
 func bullet_game_over() -> void:
 	print("Bullet collided with the bird!")
