@@ -8,6 +8,7 @@ var half_screen_x: float
 func _ready() -> void:
 	var screen_size = get_viewport_rect().size
 	half_screen_x = screen_size.x * 0.5
+	$RPGAudio.play()  # Play the RPG sound
 
 func _physics_process(delta: float) -> void:
 	velocity.x = SPEED

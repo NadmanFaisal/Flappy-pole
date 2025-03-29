@@ -27,7 +27,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
 		velocity.y = JUMP_FORCE
 		print("Bird jumped")
-		$AudioStreamPlayer.play()  # Play the flap sound
+		$BirdBounceAudio.play()  # Play the flap sound
 
 func _game_over() -> void:
 	print("Bird died!")
