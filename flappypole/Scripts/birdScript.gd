@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
 	var screen_size = get_viewport_rect().size
 	if position.y > screen_size.y or position.y < 0:
 		emit_signal("bird_out_of_bounds")
+		$BirdOutOfBounds.play()
 		_game_over()
 
 func _input(event: InputEvent) -> void:
