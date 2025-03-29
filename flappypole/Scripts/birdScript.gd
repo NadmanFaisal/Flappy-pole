@@ -3,18 +3,21 @@ extends CharacterBody2D
 const GRAVITY: float = 1000.0
 const JUMP_FORCE: float = -400.0
 
+var bullet_scene = preload("res://Scenes/BulletScene.tscn")
+
 func _physics_process(delta: float) -> void:
 	velocity.y += GRAVITY * delta
 	move_and_slide()
-	
-	if velocity.y < -150:
-		$Bird.play("tiltUp")
-	elif velocity.y > 150:   
-		$Bird.play("tiltDown")
-	else:
-		$Bird.play("tiltFlat")
 
-	
+	if velocity.y < -150:
+		rotation_degrees = -30
+	elif velocity.y > 150:   
+		rotation_degrees = 30
+	else:
+		rotation_degrees = 0
+
+
+
 	var screen_size = get_viewport_rect().size
 	if position.y > screen_size.y or position.y < 0:
 		_game_over()

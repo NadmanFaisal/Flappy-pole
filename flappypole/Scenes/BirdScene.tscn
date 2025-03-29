@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bodl4u1mjvsvm"]
+
+[ext_resource type="Script" path="res://Scripts/birdScript.gd" id="1_01m1b"]
+[ext_resource type="Texture2D" uid="uid://ho4br6l6p1ft" path="res://Assets/Sprites/Bird.png" id="2_pynqt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yolm2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pynqt")
+}],
+"loop": true,
+"name": &"tiltFlat",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1jb77"]
+radius = 16.0
+height = 44.0
+
+[node name="Bird" type="CharacterBody2D"]
+position = Vector2(571, 289)
+script = ExtResource("1_01m1b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.017334, 0.125)
+scale = Vector2(0.075, 0.075)
+sprite_frames = SubResource("SpriteFrames_yolm2")
+animation = &"tiltFlat"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_1jb77")

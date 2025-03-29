@@ -25,3 +25,19 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 		position.x = 0
 		print("Reached the left edge!")
+
+
+func _on_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_Hitbox_body_entered(body: Node2D) -> void:
+	if body.name == "Bird":
+		print("Bird hit!")
+		body._game_over()
+		bullet_game_over()
+
+func bullet_game_over() -> void:
+	print("Bullet collided with the bird!")
+	set_process(false)
+	set_physics_process(false)

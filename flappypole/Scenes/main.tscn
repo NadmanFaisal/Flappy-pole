@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://7vy12gx82n21"]
+
+[ext_resource type="PackedScene" uid="uid://cm0ybg5u7nku4" path="res://Scenes/BulletScene.tscn" id="1_bspe6"]
+[ext_resource type="PackedScene" uid="uid://bodl4u1mjvsvm" path="res://Scenes/BirdScene.tscn" id="2_no7or"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bullet" parent="." instance=ExtResource("1_bspe6")]
+
+[node name="Bird" parent="." instance=ExtResource("2_no7or")]
