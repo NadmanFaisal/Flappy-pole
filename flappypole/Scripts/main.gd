@@ -20,14 +20,6 @@ func spawn_bullet() -> void:
 	if not is_instance_valid(bird):
 		return
 
-	var anim_sprite = bird.get_node("AnimatedSprite2D")
-	var animation_name = anim_sprite.animation
-	var frame = anim_sprite.frame
-	var frame_texture = anim_sprite.sprite_frames.get_frame_texture(animation_name, frame)
-	var bird_size = frame_texture.get_size()
-
-	var bird_rect = Rect2(bird.global_position, bird_size)
-
 	if $Pipe.is_bird_touching_any_pipe(bird):
 		print("Bird is touching a pipe — safe zone.")
 		return
