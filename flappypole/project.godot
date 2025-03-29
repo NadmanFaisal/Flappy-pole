@@ -11,5 +11,9 @@ config_version=5
 [application]
 
 config/name="FlappyPole"
-config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+run/main_scene="uid://dlpbatp3gmarp"
+config/features=PackedStringArray("4.4", "Forward Plus")
+
+[display]
+
+window/size/resizable=false
