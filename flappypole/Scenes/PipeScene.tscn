@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b8nd8atnocd7w"]
 
-[ext_resource type="Script" uid="uid://jltdt7o0nr4p" path="res://Scripts/pipeScript.gd" id="1_p1buf"]
+[ext_resource type="Script" path="res://Scripts/pipeScript.gd" id="1_p1buf"]
 [ext_resource type="Texture2D" uid="uid://5o6rd0qthgjb" path="res://Assests/background.jpg" id="2_6svvj"]
 [ext_resource type="Texture2D" uid="uid://b7i7btd4qw51b" path="res://Assests/Pipe.png" id="3_6yjks"]
 

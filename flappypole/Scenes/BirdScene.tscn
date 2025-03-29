@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bodl4u1mjvsvm"]
 
-[ext_resource type="Script" uid="uid://cly3dkdfrgp3f" path="res://Scripts/birdScript.gd" id="1_01m1b"]
+[ext_resource type="Script" path="res://Scripts/birdScript.gd" id="1_01m1b"]
 [ext_resource type="Texture2D" uid="uid://ho4br6l6p1ft" path="res://Assets/Sprites/Bird.png" id="2_pynqt"]
 [ext_resource type="AudioStream" uid="uid://casmd8tkt0b6y" path="res://Assests/BounceAudio.mp3" id="3_oyl3u"]
 
@@ -16,16 +16,16 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1jb77"]
-radius = 16.0
-height = 44.0
+radius = 28.0
+height = 66.0
 
 [node name="Bird" type="CharacterBody2D"]
 position = Vector2(571, 289)
 script = ExtResource("1_01m1b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.017334, 0.125)
-scale = Vector2(0.075, 0.075)
+position = Vector2(-1.71661e-05, 1.90735e-06)
+scale = Vector2(0.130627, 0.130627)
 sprite_frames = SubResource("SpriteFrames_yolm2")
 animation = &"tiltFlat"
 

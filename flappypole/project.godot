@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="FlappyPole"
-run/main_scene="uid://ykbee7fwj5a1"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="res://Scenes/MenuScene.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/Sprites/icon.svg"
 
 [display]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cg3v5uw0nfior"]
 
-[ext_resource type="Script" uid="uid://da42xx22dksp3" path="res://Scripts/scoreScript.gd" id="1_b6j2c"]
+[ext_resource type="Script" path="res://Scripts/scoreScript.gd" id="1_b6j2c"]
 
 [node name="ScoreHUD" type="CanvasLayer"]
 script = ExtResource("1_b6j2c")

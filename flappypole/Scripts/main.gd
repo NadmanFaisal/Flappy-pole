@@ -1,8 +1,10 @@
 extends Node2D
 
 @onready var bullet_scene = preload("res://Scenes/BulletScene.tscn")
+@onready var pipe_scene = preload("res://Scenes/PipeScene.tscn")
 @onready var bird = $Bird
 @onready var score = $ScoreHUD
+@onready var game_over_scene = preload("res://Scenes/GameOverScene.tscn")
 
 
 func _ready() -> void:
@@ -38,3 +40,14 @@ func game_over():
 	score.stop_score()
 
 	$BulletSpawnTimer.stop()
+	
+	for child in get_children():
+		if child.scene_file_path == bullet_scene.resource_path:
+			child.set_physics_process(false)
+		if child.scene_file_path == pipe_scene.resource_path:
+			child.set_process(false)
+	
+	var game_over = game_over_scene.instantiate()
+	add_child(game_over)
+	var final_score = int($ScoreHUD.score_time)
+	game_over.set_score(final_score)

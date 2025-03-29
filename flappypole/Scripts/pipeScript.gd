@@ -87,7 +87,6 @@ func is_bird_touching_any_pipe(bird: CharacterBody2D) -> bool:
 		if group.has_overlapping_bodies():
 			var overlaps = group.get_overlapping_bodies()
 			if bird in overlaps:
-				print("Bird is SAFE — touching pipe group:", group.name)
 				return true
 
-	return false  # Bird is not touching any pipe group
+	return false
