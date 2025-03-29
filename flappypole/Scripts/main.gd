@@ -15,6 +15,7 @@ func _ready() -> void:
 	$BulletSpawnTimer.one_shot = false
 	$BulletSpawnTimer.start()
 	$WhilePlayMusic.play()
+	$WhilePlayMusic.stream.loop = true
 
 func _on_BulletSpawnTimer_timeout() -> void:
 	spawn_bullet()

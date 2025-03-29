@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cshohnmgbbfub"]
 
-[ext_resource type="Script" path="res://Scripts/gameOverScript.gd" id="1_1b8l8"]
+[ext_resource type="Script" uid="uid://dk7ao7kfouw7d" path="res://Scripts/gameOverScript.gd" id="1_1b8l8"]
 [ext_resource type="Texture2D" uid="uid://dbj738rb7kf0k" path="res://Assests/PlayAgain.png" id="2_ifhp8"]
 
 [sub_resource type="Theme" id="Theme_iul32"]
