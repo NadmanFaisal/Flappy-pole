@@ -1,45 +1,46 @@
 [gd_scene load_steps=4 format=3 uid="uid://cshohnmgbbfub"]
 
 [ext_resource type="Script" uid="uid://dk7ao7kfouw7d" path="res://Scripts/gameOverScript.gd" id="1_1b8l8"]
-[ext_resource type="Texture2D" uid="uid://dbj738rb7kf0k" path="res://Assests/PlayAgain.png" id="2_ifhp8"]
+[ext_resource type="Texture2D" uid="uid://ckhv4rt4r810l" path="res://Assests/GaveOverMenuy.png" id="2_543kh"]
 
 [sub_resource type="Theme" id="Theme_iul32"]
 
 [node name="GameOver" type="CanvasLayer"]
 script = ExtResource("1_1b8l8")
 
-[node name="Score" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -124.0
-offset_right = 150.0
-offset_bottom = -24.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_iul32")
-text = "Your score was: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Replay" type="Button" parent="."]
+show_behind_parent = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -75.0
-offset_top = 76.0
-offset_right = 75.0
-offset_bottom = 126.0
+offset_left = -94.0
+offset_top = 24.0
+offset_right = 93.0
+offset_bottom = 84.0
 grow_horizontal = 2
 grow_vertical = 2
 icon_alignment = 1
 
-[node name="PlayAgain" type="Sprite2D" parent="."]
-position = Vector2(578, 436)
-scale = Vector2(0.589286, 0.639456)
-texture = ExtResource("2_ifhp8")
+[node name="GaveOverMenuy" type="Sprite2D" parent="."]
+position = Vector2(576, 319)
+scale = Vector2(0.614786, 0.614786)
+texture = ExtResource("2_543kh")
+
+[node name="Score" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = -57.0
+offset_right = 313.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_iul32")
+theme_override_font_sizes/normal_font_size = 30
+text = "0"
+vertical_alignment = 1
