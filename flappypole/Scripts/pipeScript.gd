@@ -78,3 +78,16 @@ func spawn_pipe_group(group_list, position_list):
 		group.position = original_pos + Vector2(screen_width + spacing_x, 0)
 		group.visible = true
 		active_groups.append(group)
+
+func is_bird_touching_any_pipe(bird: CharacterBody2D) -> bool:
+	for group in top_pipe_groups + bottom_pipe_groups:
+		if not group.visible:
+			continue
+
+		# Look for a StaticBody2D or Area2D inside the group
+		for child in group.get_children():
+			if bird.name == "Bird":
+				print("Bird is SAFE — touching pipe group:", group.name)
+				return true
+
+	return false  # Bird is not touching any pipe
