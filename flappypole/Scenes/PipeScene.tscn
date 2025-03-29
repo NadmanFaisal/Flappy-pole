@@ -79,7 +79,6 @@ texture = ExtResource("3_6yjks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopPipeGroup1"]
 position = Vector2(7041.49, -1843.89)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_n1sgr")
 
 [node name="TopPipeGroup2" type="Area2D" parent="."]
@@ -117,7 +116,6 @@ texture = ExtResource("3_6yjks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopPipeGroup2"]
 position = Vector2(9997.43, -1901.4)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ib20g")
 
 [node name="TopPipeGroup3" type="Area2D" parent="."]
@@ -155,7 +153,6 @@ texture = ExtResource("3_6yjks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopPipeGroup3"]
 position = Vector2(12914.5, -1647.5)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gc1yh")
 
 [node name="BottomPipeGroup1" type="Area2D" parent="."]
@@ -188,7 +185,6 @@ texture = ExtResource("3_6yjks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomPipeGroup1"]
 position = Vector2(7633.38, 1734.1)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mrs5t")
 
 [node name="BottomPipeGroup2" type="Area2D" parent="."]
@@ -221,7 +217,6 @@ texture = ExtResource("3_6yjks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomPipeGroup2"]
 position = Vector2(10433.1, 1717.74)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4aihe")
 
 [node name="BottomPipeGroup3" type="Area2D" parent="."]
@@ -254,5 +249,4 @@ texture = ExtResource("3_6yjks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomPipeGroup3"]
 position = Vector2(13276.7, 1956.63)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_i4udy")
