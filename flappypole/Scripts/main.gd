@@ -11,6 +11,10 @@ extends Node2D
 var bullet_speed := -200.0
 var pipe_speed := 800
 
+var max_bullet_spawn_time = 2
+var bullet_spawn_time = 2
+var min_bullet_spawn_time = 0.5
+
 func _ready() -> void:
 	$Bird.connect("bird_out_of_bounds", Callable(self, "game_over"))
 
@@ -26,18 +30,28 @@ func _ready() -> void:
 	speed_timer.connect("timeout", Callable(self, "_on_speed_timer_timeout"))
 	speed_timer.start()
 	
+
 	pipe_speed_timer.wait_time = 15.0
 	pipe_speed_timer.autostart = true
 	pipe_speed_timer.connect("timeout", Callable(self, "_on_pipe_speed_timer_timeout"))
 	pipe_speed_timer.start()
 
 func _on_BulletSpawnTimer_timeout() -> void:
+	update_bullet_spawn_time()
 	spawn_bullet()
 
 func _on_pipe_speed_timer_timeout():
 	pipe_speed += 200
 	$Pipe.set_speed(pipe_speed)
 	print("Pipe speed increased:", bullet_speed)
+
+func update_bullet_spawn_time() -> void:
+	# Adjust spawn time dynamically based on score
+	bullet_spawn_time = max_bullet_spawn_time - (($ScoreHUD.score_time / 5) * 0.1)
+	if bullet_spawn_time < min_bullet_spawn_time:
+		bullet_spawn_time = min_bullet_spawn_time
+	$BulletSpawnTimer.wait_time = bullet_spawn_time
+	print("Bullets spawn every:", bullet_spawn_time, "seconds")
 
 func _on_speed_timer_timeout():
 	bullet_speed -= 25
