@@ -1,8 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cshohnmgbbfub"]
+[gd_scene load_steps=7 format=3 uid="uid://cshohnmgbbfub"]
 
 [ext_resource type="Script" uid="uid://dk7ao7kfouw7d" path="res://Scripts/gameOverScript.gd" id="1_1b8l8"]
-[ext_resource type="Texture2D" uid="uid://ckhv4rt4r810l" path="res://Assests/GaveOverMenuy.png" id="2_543kh"]
+[ext_resource type="Texture2D" uid="uid://8dn13p601kiq" path="res://Assests/GameOverMenuy.png" id="2_a74uc"]
 [ext_resource type="FontFile" uid="uid://c1hufn40635l3" path="res://Assests/PixelifySans-VariableFont_wght.ttf" id="3_a74uc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a74uc"]
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg0ms"]
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
 
 [sub_resource type="Theme" id="Theme_iul32"]
 
@@ -16,18 +28,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -83.0
-offset_top = 29.0
-offset_right = 82.0
-offset_bottom = 83.0
+offset_left = -80.0
+offset_top = 6.0
+offset_right = 79.0
+offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_a74uc")
 icon_alignment = 1
+
+[node name="HomeButton" type="Button" parent="."]
+offset_left = 493.0
+offset_top = 406.0
+offset_right = 662.0
+offset_bottom = 454.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gg0ms")
 
 [node name="GaveOverMenuy" type="Sprite2D" parent="."]
 position = Vector2(576, 319)
 scale = Vector2(0.614786, 0.614786)
-texture = ExtResource("2_543kh")
+texture = ExtResource("2_a74uc")
 
 [node name="Score" type="RichTextLabel" parent="."]
 anchors_preset = 8
@@ -36,9 +56,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 46.0
-offset_top = -56.0
+offset_top = -80.0
 offset_right = 313.0
-offset_bottom = 42.0
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_iul32")
