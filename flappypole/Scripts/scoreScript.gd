@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	score_time += delta
-	$Label.text = "Score: %d" % int(score_time)
+	$Label.text = "SCORE: %d" % int(score_time)
 
 func reset_score():
 	score_time = 0.0
