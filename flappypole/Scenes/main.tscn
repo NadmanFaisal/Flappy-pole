@@ -23,4 +23,6 @@ autostart = true
 [node name="WhilePlayMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_kry3j")
 
+[node name="SpeedTimer" type="Timer" parent="."]
+
 [connection signal="timeout" from="BulletSpawnTimer" to="." method="_on_BulletSpawnTimer_timeout"]

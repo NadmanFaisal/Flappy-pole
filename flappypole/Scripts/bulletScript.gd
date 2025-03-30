@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED: float = -200.0
+var SPEED: float = -200.0
 var half_screen_x: float
 
 @onready var anim = $AnimatedSprite2D
@@ -40,3 +40,6 @@ func bullet_game_over() -> void:
 	print("Bullet collided with the bird!")
 	set_process(false)
 	set_physics_process(false)
+
+func set_speed(new_speed: float) -> void:
+	SPEED = new_speed

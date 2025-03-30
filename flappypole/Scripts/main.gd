@@ -5,7 +5,9 @@ extends Node2D
 @onready var bird = $Bird
 @onready var score = $ScoreHUD
 @onready var game_over_scene = preload("res://Scenes/GameOverScene.tscn")
+@onready var speed_timer = $SpeedTimer
 
+var bullet_speed := -200.0
 
 func _ready() -> void:
 	$Bird.connect("bird_out_of_bounds", Callable(self, "game_over"))
@@ -16,9 +18,18 @@ func _ready() -> void:
 	$BulletSpawnTimer.start()
 	$WhilePlayMusic.play()
 	$WhilePlayMusic.stream.loop = true
+	
+	speed_timer.wait_time = 5.0
+	speed_timer.autostart = true
+	speed_timer.connect("timeout", Callable(self, "_on_speed_timer_timeout"))
+	speed_timer.start()
 
 func _on_BulletSpawnTimer_timeout() -> void:
 	spawn_bullet()
+
+func _on_speed_timer_timeout():
+	bullet_speed -= 50
+	print("Bullet speed increased:", bullet_speed)
 
 func spawn_bullet() -> void:
 	if not is_instance_valid(bird):
@@ -34,6 +45,7 @@ func spawn_bullet() -> void:
 	bullet.position = Vector2(1100, bird.position.y)
 	add_child(bullet)
 	bullet.connect("bird_hit", Callable(self, "game_over"))
+	bullet.set_speed(bullet_speed)
 
 func game_over():
 	print("Game Over!")

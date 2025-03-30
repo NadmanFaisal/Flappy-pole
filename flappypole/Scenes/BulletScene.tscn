@@ -26,8 +26,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nrkt0"]
-radius = 34.0
-height = 84.0
+radius = 29.0
+height = 58.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_rm6uu"]
 resource_local_to_scene = true
@@ -63,7 +63,7 @@ animation = &"bulletAnimation"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 3)
+position = Vector2(-13, 3)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_nrkt0")
 
