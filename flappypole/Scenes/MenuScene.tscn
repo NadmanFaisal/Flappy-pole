@@ -40,3 +40,4 @@ offset_bottom = 438.0
 stream = ExtResource("4_vg0ck")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="TutoButton" to="." method="_on_tuto_button_pressed"]
