@@ -25,4 +25,6 @@ stream = ExtResource("5_kry3j")
 
 [node name="SpeedTimer" type="Timer" parent="."]
 
+[node name="PipeTimer" type="Timer" parent="."]
+
 [connection signal="timeout" from="BulletSpawnTimer" to="." method="_on_BulletSpawnTimer_timeout"]

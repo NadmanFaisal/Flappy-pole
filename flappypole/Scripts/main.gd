@@ -6,8 +6,10 @@ extends Node2D
 @onready var score = $ScoreHUD
 @onready var game_over_scene = preload("res://Scenes/GameOverScene.tscn")
 @onready var speed_timer = $SpeedTimer
+@onready var pipe_speed_timer = $PipeTimer
 
 var bullet_speed := -200.0
+var pipe_speed := 800
 
 func _ready() -> void:
 	$Bird.connect("bird_out_of_bounds", Callable(self, "game_over"))
@@ -23,12 +25,22 @@ func _ready() -> void:
 	speed_timer.autostart = true
 	speed_timer.connect("timeout", Callable(self, "_on_speed_timer_timeout"))
 	speed_timer.start()
+	
+	pipe_speed_timer.wait_time = 15.0
+	pipe_speed_timer.autostart = true
+	pipe_speed_timer.connect("timeout", Callable(self, "_on_pipe_speed_timer_timeout"))
+	pipe_speed_timer.start()
 
 func _on_BulletSpawnTimer_timeout() -> void:
 	spawn_bullet()
 
+func _on_pipe_speed_timer_timeout():
+	pipe_speed += 200
+	$Pipe.set_speed(pipe_speed)
+	print("Pipe speed increased:", bullet_speed)
+
 func _on_speed_timer_timeout():
-	bullet_speed -= 50
+	bullet_speed -= 25
 	print("Bullet speed increased:", bullet_speed)
 
 func spawn_bullet() -> void:

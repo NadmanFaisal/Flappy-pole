@@ -1,6 +1,6 @@
 extends Node2D
 
-const MOVE_SPEED = 800.0
+var MOVE_SPEED = 800.0
 const MIN_GROUP = 2
 const MAX_GROUP = 3
 const GROUP_PIPE_SPACING = 300  # spacing between groups
@@ -30,6 +30,9 @@ func _ready():
 
 	# Spawn the first group
 	spawn_group()
+
+func set_speed(new_speed: float) -> void:
+	MOVE_SPEED = new_speed
 
 func _process(delta):
 	var to_remove = []
