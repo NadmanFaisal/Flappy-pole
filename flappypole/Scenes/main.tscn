@@ -27,4 +27,9 @@ stream = ExtResource("5_kry3j")
 
 [node name="PipeTimer" type="Timer" parent="."]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1159.0
+offset_bottom = 651.0
+color = Color(1, 0.631373, 0, 0.85098)
+
 [connection signal="timeout" from="BulletSpawnTimer" to="." method="_on_BulletSpawnTimer_timeout"]

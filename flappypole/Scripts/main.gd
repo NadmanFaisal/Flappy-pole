@@ -16,6 +16,10 @@ var bullet_spawn_time = 2
 var min_bullet_spawn_time = 0.5
 
 func _ready() -> void:
+	$ColorRect.modulate.a = 0.0
+	await get_tree().create_timer(15.0).timeout
+	call_deferred("fade_in_evening_filter")
+
 	$Bird.connect("bird_out_of_bounds", Callable(self, "game_over"))
 
 	$BulletSpawnTimer.wait_time = 2.0
@@ -90,3 +94,18 @@ func game_over():
 	add_child(game_over)
 	var final_score = int($ScoreHUD.score_time)
 	game_over.set_score(final_score)
+
+func fade_in_evening_filter():
+	while true:
+		var tween = create_tween()
+
+		# Fade in (evening)
+		tween.tween_property($ColorRect, "modulate:a", 0.4, 2.0)
+		await tween.finished
+		await get_tree().create_timer(20.0).timeout  # Stay orange
+
+		# Fade out (day)
+		tween = create_tween()  # New tween after first completes
+		tween.tween_property($ColorRect, "modulate:a", 0.0, 2.0)
+		await tween.finished
+		await get_tree().create_timer(15.0).timeout  # Stay clear
