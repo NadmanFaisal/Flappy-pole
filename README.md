@@ -36,7 +36,7 @@ Your reflexes will be tested. The tension builds as your score climbs higher.
 
 ## 🧪 How to Run
 
-1. **Download the `.exe` file** from the release section [(click here](https://github.com/NadmanFaisal/Flappy-pole/edit/main/README.md).
+1. **Download the `.exe` file** from the release section [(click here)](https://zhasan0110gmailcom.itch.io/floppy-pole).
 2. Run `FlappyPole.exe` on your Windows machine.
 3. Click “Play” and begin your flight!
 
