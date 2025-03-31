@@ -3,6 +3,7 @@
 ![Flappy Pole Logo](flappypole/ReadmeStuff/FlappyLOGO.png)
 
 **Flappy Pole** is a fast-paced, reaction-based arcade game developed during **March Game Jam 2025**. It's a wild twist on the Flappy Bird genre—where going *through* the pipes spells doom. That's right: **your bird must fly *over* each pipe** to survive. If you dare slip through the gap, a deadly bullet is fired to hunt you down!
+[(CLICK HERE TO DOWNLOAD THE GAME)](https://zhasan0110gmailcom.itch.io/floppy-pole).
 
 ## 🎮 Gameplay Overview
 
