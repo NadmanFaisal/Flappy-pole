@@ -1,6 +1,6 @@
 # Flappy Pole
 
-![Flappy Pole Logo]( link will be here)
+![Flappy Pole Logo](flappypole/ReadmeStuff/FlappyLOGO.png)
 
 **Flappy Pole** is a fast-paced, reaction-based arcade game developed during **March Game Jam 2025**. It's a wild twist on the Flappy Bird genre—where going *through* the pipes spells doom. That's right: **your bird must fly *over* each pipe** to survive. If you dare slip through the gap, a deadly bullet is fired to hunt you down!
 
@@ -34,6 +34,12 @@ Your reflexes will be tested. The tension builds as your score climbs higher.
 
 > The game is currently available only for **Windows** via `.exe` build.
 
+## 🧪 How to Run
+
+1. **Download the `.exe` file** from the release section [(click here](https://github.com/NadmanFaisal/Flappy-pole/edit/main/README.md).
+2. Run `FlappyPole.exe` on your Windows machine.
+3. Click “Play” and begin your flight!
+
 ## 🕹 Controls
 
 | Action         | Input         |
@@ -54,11 +60,12 @@ Your reflexes will be tested. The tension builds as your score climbs higher.
 - `scoreScript.gd` – Score tracking and display
 - `.tscn files` – Scenes for Menu, Main gameplay, and Bird
 
-## 🧪 How to Run
+## 🛠️ Tools Used
+- Figma
+- Godot
 
-1. **Download the `.exe` file** from the release section [(click here](https://github.com/NadmanFaisal/Flappy-pole/edit/main/README.md).
-2. Run `FlappyPole.exe` on your Windows machine.
-3. Click “Play” and begin your flight!
+## 🎞️ Wireframe
+![Wireframe](flappypole/ReadmeStuff/Figma.png)
 
 ## 👥 Credits
 
